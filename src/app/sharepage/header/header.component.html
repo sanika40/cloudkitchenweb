@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">My Shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="dashboard">Product Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="details">Product Details</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Profile
+          </a>
+          <ul class="dropdown-menu">
+            <li *ngIf="userStatus"><a class="dropdown-item" routerLink="auth/signIn">SignIn</a></li>
+            <li *ngIf="userStatus"><a class="dropdown-item" routerLink="auth/signUp">SignUp</a></li>
+            <li *ngIf="!userStatus"><a class="dropdown-item btn btn-warning" (click)="logout()" >Sign Out</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><i class="fa-brands fa-searchengin"></i></button>&nbsp;
+        <a class="btn btn-outline-warning" routerLink="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i></a> <sup *ngIf="notify != 0">{{notify}}</sup>
+      </form>
+    </div>
+  </div>
+</nav>

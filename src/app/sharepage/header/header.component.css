@@ -1,0 +1,15 @@
+/* .active-link{
+    font-weight: bold;
+} */
+
+.navbar-nav .nav-link.active-link
+{
+    color: var(--secondary-color);
+    /* font-weight: bold; */
+}
+.navbar-nav .nav-link.active-link
+{
+    color: var(--primary-color);
+    /* font-weight: bold; */
+    text-decoration: underline;
+}

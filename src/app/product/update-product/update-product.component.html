@@ -1,0 +1,31 @@
+<form [formGroup]="addProductForm" (ngSubmit)="updateForm()" class="form-control my-3">
+    <h2>Update Product</h2>
+            <div class="inp1">
+                <label for="id">Id</label><br>
+                <input type="number" id="id" formControlName="id" placeholder="Id">
+            </div><br>
+            <div class="inp2">
+                <label for="id">Title</label><br>
+                <input type="text" id="title" formControlName="foodName" placeholder="Title">
+            </div><br>
+            <div class="inp3">
+                <label for="id">Category</label><br>
+                <input type="text" id="cat" formControlName="foodDetails" placeholder="Category">
+            </div><br>
+
+
+            <div class="inp4">
+                <img [src]="imgPath" alt="" width="100px" height="100px">
+                <label for="img">Image</label><br>
+                <input type="file" id="img" (change)="changeImg($event)">
+            </div><br>
+
+
+            <div class="inp5">
+                <label for="id">Price</label><br>
+                <input type="price" id="price" formControlName="foodPrice" placeholder="Price">
+            </div>
+        
+            <button class="btn btn-info m-2">Update Product</button>
+</form>
+    

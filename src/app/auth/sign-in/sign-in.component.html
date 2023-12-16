@@ -1,0 +1,16 @@
+<form #formData="ngForm" (ngSubmit)="submitForm(formData.value,profile.value)">
+    <select #profile>
+        <option value="admin">Admin</option>
+        <option value="users">User</option>
+    </select>
+
+    <br>
+    <br>
+    <div>
+        <input type="text" name="Username" ngModel placeholder="Username">
+    </div> <br>
+    <div>
+        <input type="password" name="Password" ngModel placeholder="Password">
+    </div><br>
+    <button>Login</button>
+</form>

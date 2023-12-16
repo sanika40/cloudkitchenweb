@@ -1,0 +1,15 @@
+<div class="d-flex flex-wrap justify-content-evenly">
+    <div class="card m-2 text-center" style="width: 18rem;" *ngFor="let data of productData">
+        <img [src]="data.foodImg" class="card-img-top" alt="..." width="150px" height="150px">
+        <div class="card-body">
+            <h3 class="card-text">  {{data.foodName}}</h3>
+            <p class="card-text">  {{data.foodDetails}}</p>
+            <p class="card-text">Price: {{data.foodPrice}}</p>
+        </div>
+        <div>
+            <button class="btn btn-outline-warning"> <i class="fa-solid fa-heart"></i> Like</button> &nbsp; &nbsp;
+            <button class="btn btn-outline-primary" (click)="addToCard(data)"> <i class="fa-solid fa-cart-shopping"></i> Add To Cart</button>
+        </div>
+      </div>
+
+</div>

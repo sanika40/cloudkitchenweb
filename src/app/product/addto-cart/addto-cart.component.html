@@ -1,0 +1,27 @@
+
+
+<table>
+    <tr *ngFor="let data of cartProduct">       
+        <td>
+            <img [src]="data.foodImg" alt="" width="100px" height="100px">
+        </td>
+        <th>
+            <h3>{{data.foodName}}</h3>
+        </th>
+        <td>
+            <h4>Qty: {{data.qty}}</h4>
+        </td>
+        <td>
+            <h4>Price: {{data.foodPrice}}</h4>
+        </td>
+    </tr>
+    <tr>
+        <th colspan="2">
+            <h3>Total</h3>
+        </th>
+        <td>
+            <h4>{{totalAm | currency : "INR"}}</h4>
+        </td>
+    </tr>
+</table>
+<a class="btn btn-outline-warning" routerLink="/details" >Place Order</a>
